@@ -37,7 +37,7 @@ btn1.addEventListener('click', BuyOneButton = () => {
 
 btn2.addEventListener('click', BuyAutoButton1 = () => {
     if (dolor$ >= btn2.value) {
-        dolor$ -= btn1.value;
+        dolor$ -= btn2.value;
         autoclick += 1;
         btn2.value *= 1.1;
     }
@@ -47,7 +47,12 @@ btn2.addEventListener('click', BuyAutoButton1 = () => {
     btn2.innerText = Math.floor(btn2.value);
 });
 
-btn3.addEventListener('click', BuyAutoButton2 = () =>{})
+btn3.addEventListener('click', BuyAutoButton2 = () =>{
+    if(dolor$ >= btn3.value){
+        dolor$ -= btn3.value;
+        autoclick
+    }
+});
 
 
 const update = () =>{
