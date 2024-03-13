@@ -1,0 +1,12 @@
+:root{
+    --background: #72dbfe;
+}
+
+body{
+    background-color: var(--background);
+}
+
+input{
+    border: none;
+    background-color: var(--background);
+}
