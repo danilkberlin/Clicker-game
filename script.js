@@ -1,4 +1,4 @@
-let dolor$ = 2220;
+let dolor$ = 0;
 let autoclick = 0;
 let click = 1;
 
@@ -28,7 +28,8 @@ btn1.addEventListener('click', BuyOneButton = () => {
         click += 1;
         dolor$ += click;  
         btn1.value /= 0.9;
-    }
+    };
+
     dolorText$.innerText =`${Math.floor(dolor$)}$`;
     indicatorClickText.innerText = click;
     indicatorAutoclickSecText.innerText = autoclick;
@@ -40,7 +41,7 @@ btn2.addEventListener('click', BuyAutoButton1 = () => {
         dolor$ -= btn2.value;
         autoclick += 1;
         btn2.value *= 1.1;
-    }
+    };
 
     dolorText$.innerText =`${Math.floor(dolor$)}$`;
     indicatorAutoclickSecText.innerText = autoclick;
@@ -50,8 +51,13 @@ btn2.addEventListener('click', BuyAutoButton1 = () => {
 btn3.addEventListener('click', BuyAutoButton2 = () =>{
     if(dolor$ >= btn3.value){
         dolor$ -= btn3.value;
-        autoclick
-    }
+        autoclick += 25;
+        btn3.value *= 1.1;
+    };
+
+    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    indicatorAutoclickSecText.innerText = autoclick;
+    btn3.innerText = Math.floor(btn3.value);
 });
 
 
