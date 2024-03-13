@@ -1,4 +1,4 @@
-let dolor$ = 0;
+let dolor$ = 100000000;
 let autoclick = 0;
 let click = 1;
 
@@ -13,6 +13,7 @@ const indicatorAutoclickSecText = document.querySelector('.indicator-autoclick-s
 const btn1 = document.querySelector('.autoclick-sec1'); // click upgreat
 const btn2 = document.querySelector('.autoclick-sec2'); // click upgreat
 const btn3 = document.querySelector('.autoclick-sec3'); // click upgreat
+const btn4 = document.querySelector('.autoclick-sec4'); // click upgreat
 
 
 clickerButton.addEventListener('click', OneClickOneDolor = () =>{
@@ -40,7 +41,7 @@ btn2.addEventListener('click', BuyAutoButton1 = () => {
     if (dolor$ >= btn2.value) {
         dolor$ -= btn2.value;
         autoclick += 1;
-        btn2.value *= 1.1;
+        btn2.value *= 1.07;
     };
 
     dolorText$.innerText =`${Math.floor(dolor$)}$`;
@@ -52,12 +53,24 @@ btn3.addEventListener('click', BuyAutoButton2 = () =>{
     if(dolor$ >= btn3.value){
         dolor$ -= btn3.value;
         autoclick += 25;
-        btn3.value *= 1.1;
+        btn3.value *= 1.07;
     };
 
     dolorText$.innerText =`${Math.floor(dolor$)}$`;
     indicatorAutoclickSecText.innerText = autoclick;
     btn3.innerText = Math.floor(btn3.value);
+});
+
+btn4.addEventListener('click', BuyAutoButton3 = () =>{
+    if(dolor$ >= btn4.value){
+        dolor$ -= btn4.value;
+        autoclick += 100;
+        btn4.value *= 1.07;
+    };
+
+    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    indicatorAutoclickSecText.innerText = autoclick;
+    btn4.innerText = Math.floor(btn4.value);
 });
 
 
