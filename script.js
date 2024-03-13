@@ -1,4 +1,4 @@
-let dolor$ = 100000000;
+let dolor$ = 0;
 let autoclick = 0;
 let click = 1;
 
@@ -94,3 +94,8 @@ const update = () =>{
 }
 
 update();
+
+//if formul
+    //dolor$ === 100 ? btn1.open : btn2.style.none  
+
+//img return 
