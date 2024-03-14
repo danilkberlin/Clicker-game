@@ -99,3 +99,4 @@ update();
     //dolor$ === 100 ? btn1.open : btn2.style.none  
 
 //img return 
+

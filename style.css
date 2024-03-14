@@ -1,9 +1,30 @@
 :root{
-    --background: #72dbfe;
+    --background-button: linear-gradient(112deg, rgba(250,226,187,1) 30%, rgba(243,233,217,1) 30%);
+    --background-button-hrader: #876532;
+    --button-color-text: #1b1b1b;
+    --button-color-footer-text: #b1b1b1;
+    --background-color-hp-bar: #ff0000;
+    --color-dolors: #fff;
+    --text-and-color-shadow: 1px 1px 1px #1b1b1b,
+        2px 2px 2px #1b1b1b, 3px 3px 4px #1b1b1b,
+        4px 4px 6px #1b1b1b;
+    --img-height: 150px;
+
 }
 
+
+/* -------------------------------------------------- */
+.text-color-dekoration{
+    color: var(--color-dolors);
+    text-shadow: var(--text-and-color-shadow);
+}
+
+
 body{
-    background-color: var(--background);
+    background-image: url(https://png.pngtree.com/background/20230411/original/pngtree-mountain-sunset-nature-landscape-background-picture-image_2390345.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 input{
