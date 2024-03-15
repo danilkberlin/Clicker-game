@@ -1,4 +1,4 @@
-let dolor$ = 100000;
+let dolor$ = 0;
 let autoclick = 0;
 let click = 1;
 
@@ -19,7 +19,7 @@ const btn5 = document.querySelector('.autoclick-sec5'); // click upgreat
 
 clickerButton.addEventListener('click', OneClickOneDolor = () =>{
     Math.floor(dolor$ += click);
-    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    dolorText$.innerText =`${Math.floor(dolor$)}`;
     indicatorClickText.innerText = click;
     indicatorAutoclickSecText.innerText = autoclick;
 });
@@ -32,7 +32,7 @@ btn1.addEventListener('click', BuyOneButton = () => {
         btn1.value /= 0.9;
     };
 
-    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    dolorText$.innerText =`${Math.floor(dolor$)}`;
     indicatorClickText.innerText = click;
     indicatorAutoclickSecText.innerText = autoclick;
     btn1.innerText = Math.floor(btn1.value);
@@ -45,7 +45,7 @@ btn2.addEventListener('click', BuyAutoButton1 = () => {
         btn2.value *= 1.07;
     };
 
-    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    dolorText$.innerText =`${Math.floor(dolor$)}`;
     indicatorAutoclickSecText.innerText = autoclick;
     btn2.innerText = Math.floor(btn2.value);
 });
@@ -57,7 +57,7 @@ btn3.addEventListener('click', BuyAutoButton2 = () =>{
         btn3.value *= 1.07;
     };
 
-    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    dolorText$.innerText =`${Math.floor(dolor$)}`;
     indicatorAutoclickSecText.innerText = autoclick;
     btn3.innerText = Math.floor(btn3.value);
 });
@@ -69,7 +69,7 @@ btn4.addEventListener('click', BuyAutoButton3 = () =>{
         btn4.value *= 1.07;
     };
 
-    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    dolorText$.innerText =`${Math.floor(dolor$)}`;
     indicatorAutoclickSecText.innerText = autoclick;
     btn4.innerText = Math.floor(btn4.value);
 });
@@ -81,7 +81,7 @@ btn5.addEventListener('click', BuyAutoButton3 = () =>{
         btn5.value *= 1.07;
     };
 
-    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    dolorText$.innerText =`${Math.floor(dolor$)}`;
     indicatorAutoclickSecText.innerText = autoclick;
     btn5.innerText = Math.floor(btn5.value);
 });
@@ -89,7 +89,7 @@ btn5.addEventListener('click', BuyAutoButton3 = () =>{
 
 const update = () =>{
     dolor$ += autoclick;
-    dolorText$.innerText =`${Math.floor(dolor$)}$`;
+    dolorText$.innerText =`${Math.floor(dolor$)}`;
     setTimeout(update, 1000);
 }
 
