@@ -1,4 +1,4 @@
-let dolor$ = 0;
+let dolor$ = 100000;
 let autoclick = 0;
 let click = 1;
 

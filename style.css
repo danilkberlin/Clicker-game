@@ -19,12 +19,31 @@
     text-shadow: var(--text-and-color-shadow);
 }
 
+.autoclick-sec2, .autoclick-sec1, .autoclick-sec3, .autoclick-sec4, .autoclick-sec5{
+    background: var(--background-button);
+    border: 1px solid var(--background-button-hrader);
+    border-radius: 15px;
+}
+
+.background-color-header{
+    background-color: var(--background-button-hrader);
+    border-radius: 15px 15px 0px 0px ;
+}
 
 body{
     background-image: url(https://png.pngtree.com/background/20230411/original/pngtree-mountain-sunset-nature-landscape-background-picture-image_2390345.jpg);
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
+}
+
+.container-whis-button{
+    background-color: #1b1b1b7d;
+    border-radius: 0 0 15px 15px;
+    overflow-y: auto;
+    height: 90%;
+    width: 100%;
+    
 }
 
 input{
