@@ -1,7 +1,15 @@
 //  Создаем перемениые
-let dolor$ = 0; //Изначально у нас есть 0 манет 
+let dolor$ = 100000; //Изначально у нас есть 0 манет 
 let autoclick = 0; //Изначально у нас есть 0 автокликов  
 let click = 1;  //Изначально у нас есть всего 1 клик 
+const thresholds = [
+    { threshold: 1e15, prefix: 'P' },
+    { threshold: 1e12, prefix: 'T' },
+    { threshold: 1e9, prefix: 'G' },
+    { threshold: 1e6, prefix: 'M' },
+    { threshold: 1e3, prefix: 'K' }
+];
+
 
 // =======================================================
 //Создаем переменные в которых укажем поиск по селектору DOM
@@ -16,6 +24,20 @@ const buttonShopsClickText = document.querySelector(".dolor-text-click");
 
 // =======================================================
 //Создаем Функцию 
+
+
+const updateDolorWithPrefix = (value) => {
+    for (const threshold of thresholds) {
+        if (value >= threshold.threshold) {
+            const prefixedValue = Math.floor(value / threshold.threshold);
+            dolor$Text.innerText(`${prefixedValue}${threshold.prefix}`);
+            return;
+        }
+    }
+    dolor$Text.innerText(Math.floor(value));
+};
+
+
 autoText.innerText = autoclick;
 
 
@@ -52,9 +74,11 @@ buttonShops.forEach((buttonShop) => {
 });
 
 const update = () =>{
+    
     dolor$ += autoclick;
     dolor$Text.innerText =`${Math.floor(dolor$)}`;
     setTimeout(update, 1000);
 }
+
 
 update();
